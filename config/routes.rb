@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resource :reservations
+  resource :reservations do
+    delete ':id', to: 'reservations#destroy'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
